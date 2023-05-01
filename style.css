@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+
+    --Transparent-white : hsla(0, 0%, 100%, 0.75); /* (paragraphs)*/
+    --Very-light-gray : hsl(0, 0%, 95%); /* background, headings, buttons*/
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.cl-orange{
+    color: var(--Bright-orange);
+}
+.cl-dcyan{
+    color: var(--Dark-cyan);
+}
+.cl-vdcyan{
+    color: var(--Very-dark-cyan);
+}
+.orange{
+    background-color: var(--Bright-orange);
+    color: var(--Very-light-gray);
+}
+.darkCyan{
+    background-color: var(--Dark-cyan);
+    color: var(--Very-light-gray);
+}
+.veryDarkCyan{
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-light-gray);
+}
+.p-color{
+    color: var(--Transparent-white);
+}
+
+body{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    font-family: 'Lexend Deca' sans-serif;
+    font-weight: 400;
+    place-content: center;
+}
+
+.main{
+    display: grid;
+    place-content: center;
+    max-width: 960px;
+}
+
+.card-container{
+    overflow: hidden;
+    display: grid;
+    border-radius: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.card-container .card h2{
+    font-family: "Big Shoulders Display";
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+.card-container .card p{
+    font-family: "Lexend Deca";
+}
+.card img{
+    width: 4rem;
+}
+.card p{
+    line-height: 1.5rem;
+}
+.card{
+
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+   padding: 3rem;
+}
+.card button{
+    font-family: "Lexend Deca";
+    border-radius: 3rem;
+    padding: 1rem;
+    border: 1px solid;
+    background-color: var(--Very-light-gray);
+    width: 75%;
+    margin-top: auto;
+}
+.card button:hover{
+    background-color: inherit;
+    border-color: var(--Transparent-white);
+    color: var(--Transparent-white);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+footer{
+    grid-row: 2fr;
+}
