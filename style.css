@@ -52,6 +52,7 @@ body{
     display: grid;
     place-content: center;
     max-width: 960px;
+    margin:0.5rem
 }
 
 .card-container{
